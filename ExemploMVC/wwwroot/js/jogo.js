@@ -11,6 +11,10 @@ function jogador1() {
     $(cartas1).attr("src", '/images/' + numeroAleatorioUm + '.png');
     pontos1 += numeroAleatorioUm;
     document.getElementById('jogador1').innerHTML = 'Pontos: ' + pontos1;
+
+    if (pontos1 >= 21) {
+        parar1();
+    }
 }
 
 function jogador2() {
@@ -19,6 +23,10 @@ function jogador2() {
     $(cartas2).attr("src", '/images/' + numeroAleatorioDois + '.png');
     pontos2 += numeroAleatorioDois;
     document.getElementById('jogador2').innerHTML = 'Pontos: ' + pontos2;
+
+    if (pontos2 >= 21) {
+        parar2();
+    }
 }
 
 var pontos1 = 0;
